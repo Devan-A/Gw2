@@ -133,7 +133,7 @@ namespace Gw2.ItemHelper.UI
             string text = null;
             try
             {
-                text = await ClipboardUtil.WindowsClipboardService.GetClipboardContentsAsync();
+                text = await ClipboardUtil.WindowsClipboardService.GetTextAsync();
             }
             catch (Exception ex)
             {

@@ -196,7 +196,7 @@ namespace Gw2.ItemHelper.Services
         {
             try
             {
-                var recipeIds = await api.Gw2ApiClient.V2.Recipes.Search.InputAsync(itemId).ConfigureAwait(false);
+                var recipeIds = await api.Gw2ApiClient.V2.Recipes.Search.Input(itemId).GetAsync().ConfigureAwait(false);
                 if (recipeIds == null || recipeIds.Count == 0)
                     return null;
 

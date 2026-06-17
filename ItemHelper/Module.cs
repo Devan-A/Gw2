@@ -114,7 +114,7 @@ namespace Gw2.ItemHelper
         {
             try
             {
-                string text = await ClipboardUtil.WindowsClipboardService.GetClipboardContentsAsync();
+                string text = await ClipboardUtil.WindowsClipboardService.GetTextAsync();
                 if (text == _lastClipboard)
                     return;
 

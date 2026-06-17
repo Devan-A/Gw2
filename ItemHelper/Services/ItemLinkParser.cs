@@ -32,7 +32,7 @@ namespace Gw2.ItemHelper.Services
 
             try
             {
-                if (Gw2ChatLink.TryParse(match.Value, out Gw2ChatLink link) && link is ItemChatLink itemLink)
+                if (Gw2ChatLink.TryParse(match.Value, out IGw2ChatLink link) && link is ItemChatLink itemLink)
                 {
                     itemId = itemLink.ItemId;
                     return itemId > 0;
