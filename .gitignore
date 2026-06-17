@@ -1,0 +1,22 @@
+# Build output
+[Bb]in/
+[Oo]bj/
+*.user
+*.suo
+
+# Visual Studio / Rider
+.vs/
+.idea/
+*.userprefs
+
+# NuGet
+packages/
+*.nupkg
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python cache (tools/)
+__pycache__/
+*.pyc

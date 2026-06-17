@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net48</TargetFramework>
+    <LangVersion>9.0</LangVersion>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
+    <RootNamespace>Gw2.ItemHelper</RootNamespace>
+    <AssemblyName>Gw2.ItemHelper</AssemblyName>
+    <Configurations>Debug;Release</Configurations>
+  </PropertyGroup>
+
+  <!--
+    The "Blish HUD" package brings in MonoGame and Gw2Sharp as reference
+    assemblies and adds the MSBuild targets that package this project into a
+    ready-to-install ".bhm" module file on build.
+  -->
+  <ItemGroup>
+    <PackageReference Include="Blish HUD" Version="1.1.1" />
+    <!-- Newtonsoft is provided by Blish HUD at runtime; reference it for
+         compilation only so we don't ship a duplicate copy. -->
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3">
+      <ExcludeAssets>runtime</ExcludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <!-- The manifest and everything under ref/ are embedded into the module. -->
+  <ItemGroup>
+    <EmbeddedResource Include="manifest.json" />
+    <EmbeddedResource Include="ref\**\*.*" />
+  </ItemGroup>
+
+</Project>

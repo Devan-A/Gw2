@@ -1,0 +1,17 @@
+{
+  "$schema": "https://blishhud.com/Manifest.schema.json",
+  "name": "Item Helper",
+  "version": "0.1.0",
+  "namespace": "Gw2.ItemHelper",
+  "package_namespace": "item-helper",
+  "url": "https://github.com/devan-a/gw2",
+  "author": {
+    "name": "Devan A"
+  },
+  "contributors": [],
+  "description": "Helps new players understand their items. Copy an item's chat link in-game (shift-click it into chat, then Ctrl+C) and Item Helper decodes it and explains what the item is for. Focuses on consumables, crafting materials, containers, and gizmos.",
+  "dependencies": {
+    "bh.blishhud": ">=1.0.0"
+  },
+  "api_version": 1
+}
